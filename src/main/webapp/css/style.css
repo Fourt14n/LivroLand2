@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header, footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(17, 24, 157, 0.646);
+}
+
+footer{
+    padding: 20px;
+}
+
+.headerRight{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.headerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    padding: 20px;
+}
+
+.logoLivro{
+    height: 40px;
+    cursor: pointer;
+}
+
+.fakeSearch{
+    width: 300px;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+}
+.btnAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    	gap: 20px;
+}
+
+/* A partir daqui eu começo a fazer a estilização da main, começando pela imagem de apresentação do site */
+
+.presentationContainer{
+    padding: 40px;
+}
+
+.presentationContainer .presentation{
+    background-color: rgb(136, 137, 150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 210px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    max-width: 100%;
+}
+.btnAdd a button{
+    padding: 10px 50px;
+    background-color: rgba(17, 24, 157, 0.646);
+    border-radius: 10px;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.btnAdd a button:hover{
+    background-color: rgba(46, 55, 220, 0.646);
+    cursor: pointer;
+
+}
+
+.presentationContainer .presentation:hover {
+    height: 230px;
+}
+
+.presentationText h1{
+    color: white;
+}
+
+.presentationText p{
+    color: rgb(227, 227, 227);
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.presentationImg{
+    display: flex;
+    align-items: center;
+    height: 118%;
+}
+
+/* Com a presentation feita, é hora de partir para a estilização dos ditos cards */
+
+.cardsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 10% 0%;
+    gap: 3rem 5rem;
+}
+
+.card-livro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    background-color: rgba(17, 24, 157, 0.646);
+    border-radius: 20px;
+}
+
+.card-content{
+    padding: 3rem 8rem;
+    text-align: center;
+    gap: 1.1rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgLivro{
+    height: 250px;
+    width: 200px;
+}
+
+/* 
+    A partir daqui eu estilizo o forms
+
+*/
+
+.bodyContainer{
+    height: 100%;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(141, 142, 145, 0.4);
+    border-radius: 50px;
+    width: 40%;
+}
+
+.formContainer{
+    display: flex;  
+    align-items: center;
+    padding: 10px 50px 20px 50px;
+}
+.blackFont{
+    color: black;
+}
+.backButtonContainer{
+    padding: 20px;
+}
+.backButton{
+    width: 20px;
+}
+.inputsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nameContainer, .authorContainer, .pagesContainer, .priceContainer, .descContainer, .imgContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.inputs{
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+}
+
+.inputs:enabled, .descTxtArea:enabled{
+    outline: none;
+}
+.descTxtArea{
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+.sendBtn{
+    background-color: rgba(17, 24, 157, 0.646);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.sendBtn:hover{
+    background-color: rgba(27, 37, 226, 0.646);
+}
+
+/* 
+    Agora eu vou estilizar a página de visualização do produto
+*/
+.bodyView{
+    width: 100%;
+    height: 100%;
+}
+.cardsContainerView{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    margin-left: 10%;
+    padding: 1% 0px;
+}
+.card-content-view{
+    width: 80%;
+    display: flex;
+    border-radius: 25px;
+} 
+.imgLivroView{
+    height: 80%;
+}
+.viewCardImg, .viewCardTexts{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.viewCardTexts{
+    gap: 5px;
+}
+.backView{
+    font-size: 25px;
+}
