@@ -6,7 +6,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Funcionários</title>
       <link rel="stylesheet" href="./css/style.css" />
  
   </head>
@@ -26,12 +26,6 @@
             type="text"
           />
         </div>
-        
-        <div class="funcionariosContainer">
-        	<a href="./funcionarios_home">
-        		<button type="button">Funcionários</button>
-        	</a>
-        </div>
 
       </div>
     </header>
@@ -43,22 +37,22 @@
           <div class="presentationImg">
             <img
               class="presentationImg"
-              src="image/presentationImg.png"
+              src="image/logoLampda.png"
               alt=""
             />
           </div>
 
           <div class="presentationText">
-            <h1>Os melhores livros</h1>
-            <p>Explore histórias e descubra novos mundos.</p>
+            <h1>LivroLand 2</h1>
+            <p>Gerencie de forma otimizada seus funcionários.</p>
           </div>
         </div>
       </div>
 
       
       <div class="btnAdd">
-        <a href="./form">
-          <button>Adicionar livro</button>
+        <a href="./funcionario_form">
+          <button>Adicionar funcionário</button>
         </a>
       </div>
 
@@ -68,17 +62,17 @@
       ArrayList(Livro) livros
        -->
        
-            <c:forEach items="${livros}" var="livro">
-        <a class="card-livro" href="livro?idLivro=${livro.id}">
+            <c:forEach items="${funcionarios}" var="funcionario">
+        <a class="card-livro" href="funcioniario?idFuncionario=${funcionario.id}">
           <div class="card-content">
             <img class="imgLivro" src="image/oNomeVento.jpg" alt="Livro" />
-            <h2 class="headerLivro">${livro.nome}</h2> <!--  Livro.getNome() -->
-            <h3 class="authorLivro">${livro.autor}</h3>
-            <p class="paginasLivro">${livro.qntdPaginas}</p>
+            <h2 class="headerLivro">${funcionario.nome}</h2> <!--  Livro.getNome() -->
+            <h3 class="authorLivro">${funcionario.autor}</h3>
+            <p class="paginasLivro">${funcionario.qntdPaginas}</p>
             <p class="descLivro">
-              ${livro.descricao}
+              ${funcionario.descricao}
             </p>
-            <h1 class="precoLivro">${livro.preco}</h1>
+            <h1 class="precoLivro">${funcionario.preco}</h1>
           </div>
         </a>
         </c:forEach>

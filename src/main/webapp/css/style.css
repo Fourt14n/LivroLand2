@@ -28,8 +28,8 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
     padding: 20px;
+    gap: 10px;
 }
 
 .logoLivro{
@@ -50,6 +50,24 @@ footer{
     align-items: center;
     padding-top: 70px;
     	gap: 20px;
+}
+
+.funcionariosContainer{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.funcionariosContainer a button{
+    padding: 10px 20px;
+    background-color: rgba(17, 24, 157, 0.646);
+    border-radius: 10px;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.funcionariosContainer a button:hover{
+    background-color: rgba(46, 55, 220, 0.646);
+    cursor: pointer;
 }
 
 /* A partir daqui eu começo a fazer a estilização da main, começando pela imagem de apresentação do site */

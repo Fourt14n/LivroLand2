@@ -20,7 +20,9 @@
         <div class="headerContainer">
           
           <div class="headerRight">
-            <img class="logoLivro" src="image/LogoLivro.png" alt="" />
+            <a href="./home">
+          	<img class="logoLivro" src="image/LogoLivro.png" alt="" />
+          </a>
             <input
               placeholder="Não busque, não funcionará..."
               class="fakeSearch"
@@ -73,7 +75,7 @@
             </div>
             <div class="descContainer">
                 <label class="desc blackFont" for=""> Descrição do livro: </label>
-                <textarea value="${livro.descricao}" name="descricao" rows="7" maxlength="240" class="descTxtArea blackFont" placeholder="Uma breve descrição do livro" name="" id=""></textarea>
+                <textarea name="descricao" rows="7" maxlength="240" class="descTxtArea blackFont" placeholder="Uma breve descrição do livro" name="" id="">${livro.descricao}</textarea>
             </div>
         
 
