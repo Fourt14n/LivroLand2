@@ -3,6 +3,7 @@ package br.com.livraria.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.com.livraria.dao.FuncionarioConnectionFactory;
 import br.com.livraria.dao.FuncionarioDao;
@@ -30,6 +31,13 @@ public class FuncionarioController {
 		
 	}
 		
+	@RequestMapping(value = "adicionarFuncionario", method = RequestMethod.POST)
+	public String adicionarFuncionario(Funcionario funcionario) {
+		FuncionarioDao dao = new FuncionarioDao();
+		dao.inserir(funcionario);
+		return "redirect:funcionarios_home";
+	}
+	
 		
 		
 		

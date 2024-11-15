@@ -10,7 +10,7 @@ public class FuncionarioDao {
 	private Connection conexao;
 	// Eu anotei anteriormente que esse construtor é criado para facilitar a conexão com o banco
 	public FuncionarioDao() {
-		FuncionarioConnectionFactory.conectar();
+		conexao = FuncionarioConnectionFactory.conectar();
 	}
 	
 	public void inserir(Funcionario funcionario) {
@@ -33,7 +33,7 @@ public class FuncionarioDao {
 			
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println("Deu erro: " + e.getMessage());
+			System.out.println("Deu erro no inserir do dao: " + e.getMessage());
 		}
 	}
 }
