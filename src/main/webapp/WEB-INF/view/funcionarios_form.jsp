@@ -35,7 +35,7 @@
       <form method="POST" action="${funcionario.id != null ? 'atualizarFuncionario' : 'adicionarFuncionario' }?idFuncionario=${funcionario.id}">
         
        <div class="backButtonContainer">
-        <a href="./home">
+        <a href="./funcionarios_home">
             <img class="backButton"  src="image/backImg.png" alt="">
         </a>
        </div>

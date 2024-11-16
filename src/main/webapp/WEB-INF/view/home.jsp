@@ -74,11 +74,11 @@
             <img class="imgLivro" src="image/oNomeVento.jpg" alt="Livro" />
             <h2 class="headerLivro">${livro.nome}</h2> <!--  Livro.getNome() -->
             <h3 class="authorLivro">${livro.autor}</h3>
-            <p class="paginasLivro">${livro.qntdPaginas}</p>
+            <p class="paginasLivro">${livro.qntdPaginas} páginas</p>
             <p class="descLivro">
               ${livro.descricao}
             </p>
-            <h1 class="precoLivro">${livro.preco}</h1>
+            <h1 class="precoLivro">R$ ${livro.preco}</h1>
           </div>
         </a>
         </c:forEach>

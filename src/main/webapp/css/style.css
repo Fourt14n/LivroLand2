@@ -237,8 +237,11 @@ form{
     Agora eu vou estilizar a página de visualização do produto
 */
 .bodyView{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .cardsContainerView{
     display: flex;
@@ -249,7 +252,7 @@ form{
     padding: 1% 0px;
 }
 .card-content-view{
-    width: 80%;
+    width: 80vw;
     display: flex;
     border-radius: 25px;
 } 
@@ -267,4 +270,11 @@ form{
 }
 .backView{
     font-size: 25px;
+}
+
+.formBody{
+	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }

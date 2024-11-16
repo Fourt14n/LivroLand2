@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import br.com.livraria.dao.FuncionarioDao;
 import br.com.livraria.dao.ConnectionFactory;
 import br.com.livraria.dao.LivroDao;
 import br.com.livraria.model.Livro;

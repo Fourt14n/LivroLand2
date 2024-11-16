@@ -13,13 +13,14 @@ public class ConnectionFactory {
 			// Pegando a biblioteca de conexão ao banco de dados
 			Class.forName("com.mysql.jdbc.Driver");
 			// CREATE DATABASE livraria;
-			Connection conexao = 
-					DriverManager.getConnection("jdbc:mysql://localhost:3306/livraria", USER, SENHA);
+			Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/livraria", USER, SENHA);
 			return conexao;
 			
 		} catch (Exception e) {
 			// throw -> jogar para cima
 			// RuntimeException -> Erro que aconteceu enquanto o codigo rodava
+			System.out.println(e);
+			System.out.println(e.getMessage());
 			throw new RuntimeException();
 		}
 		

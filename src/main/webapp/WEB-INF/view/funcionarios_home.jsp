@@ -65,14 +65,10 @@
             <c:forEach items="${funcionarios}" var="funcionario">
         <a class="card-livro" href="funcioniario?idFuncionario=${funcionario.id}">
           <div class="card-content">
-            <img class="imgLivro" src="image/oNomeVento.jpg" alt="Livro" />
+            <img class="imgLivro" src="image/conta.png" alt="Livro" />
             <h2 class="headerLivro">${funcionario.nome}</h2> <!--  Livro.getNome() -->
-            <h3 class="authorLivro">${funcionario.autor}</h3>
-            <p class="paginasLivro">${funcionario.qntdPaginas}</p>
-            <p class="descLivro">
-              ${funcionario.descricao}
-            </p>
-            <h1 class="precoLivro">${funcionario.preco}</h1>
+            <h3 class="authorLivro">${funcionario.cargo}</h3>
+            <p class="paginasLivro">${funcionario.idade} anos</p>
           </div>
         </a>
         </c:forEach>
