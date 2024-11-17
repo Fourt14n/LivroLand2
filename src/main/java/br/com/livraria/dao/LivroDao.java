@@ -156,6 +156,8 @@ public class LivroDao {
 			
 		} catch (Exception e) {
 			// TODO: handle exception
+			System.out.println("Deu erro no atualizar no dao: " + e.getMessage());
+			System.out.println(e);
 			throw new RuntimeException();
 		}
 		

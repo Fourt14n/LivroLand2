@@ -17,21 +17,30 @@ public class FuncionarioController {
 		return "funcionarios_home";
 	}
 	
-	@RequestMapping("/funcionario_form")
+	@RequestMapping("/funcionarios_form")
 	public String funcionarios_form(Long idFuncionario, Model model) {
 		FuncionarioDao dao = new FuncionarioDao();
 		
 		Funcionario funcionario = new Funcionario();
 		
 		if(idFuncionario != null) {
-			dao.buscar(idFuncionario);
+			funcionario = dao.buscar(idFuncionario);
 		}
 		
 		model.addAttribute("funcionario", funcionario);
 		return "funcionarios_form";
 		
 	}
+	
+	@RequestMapping("/funcionario")
+	public String funcionario(Long idFuncionario, Model model) {
+		FuncionarioDao dao = new FuncionarioDao();
 		
+		model.addAttribute("funcionario", dao.buscar(idFuncionario));
+		
+		return "funcionario";
+	}
+	
 	@RequestMapping(value = "adicionarFuncionario", method = RequestMethod.POST)
 	public String adicionarFuncionario(Funcionario funcionario) {
 		FuncionarioDao dao = new FuncionarioDao();
@@ -39,9 +48,26 @@ public class FuncionarioController {
 		return "redirect:funcionarios_home";
 	}
 	
+	@RequestMapping(value = "editarFuncionario", method = RequestMethod.POST)
+	public String editarFuncionario(Long idFuncionario, Funcionario funcionario) {
+		FuncionarioDao dao = new FuncionarioDao();
+		
+		dao.editar(idFuncionario, funcionario);
 		
 		
+		return "redirect:funcionarios_home";
 		
+	}
+		
+	@RequestMapping(value = "deletarFuncionario", method = RequestMethod.GET)
+	public String deletarFuncionario(Long idFuncionario) {
+		FuncionarioDao dao = new FuncionarioDao();
+		
+		dao.deletar(idFuncionario);
+		
+		return "redirect:funcionarios_home";
+	}
+	
 	
 	
 	

@@ -149,6 +149,11 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 550px;
+}
+.card-content .descLivro {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .imgLivro{
@@ -287,3 +292,4 @@ form{
 	justify-content: space-between;
 	flex-direction: column;
 }
+

@@ -86,6 +86,7 @@ public class FuncionarioDao {
 			Funcionario f = null;
 			
 			while(resultado.next()) {
+				f = new Funcionario();
 				f.setId(resultado.getLong("id"));
 				f.setNome(resultado.getString("nome"));
 				f.setCargo(resultado.getString("cargo"));
@@ -104,7 +105,51 @@ public class FuncionarioDao {
 			throw new RuntimeException();
 			// TODO: handle exception
 		}
+	}
+	
+	public void editar(Long idFuncionario, Funcionario funcionario) {
+		String sql = "UPDATE funcionarios SET nome = ?, cargo = ?, idade = ? WHERE id = ?";
 		
+		PreparedStatement smtp;
 		
+		try {
+			smtp = conexao.prepareStatement(sql);
+			smtp.setString(1, funcionario.getNome());
+			smtp.setString(2, funcionario.getCargo());
+			smtp.setInt(3, funcionario.getIdade());
+			smtp.setLong(4, idFuncionario);
+			
+			smtp.execute();
+			smtp.close();
+			conexao.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Deu erro no editar do dao: " + e.getMessage());
+			System.out.println(e);
+			throw new RuntimeException();
+		}	
+	}
+	
+	public void deletar(Long idFuncionario) {
+		String sql = "DELETE FROM funcionarios WHERE id = ?";
+		
+		PreparedStatement smtp;
+		
+		try {
+			smtp = conexao.prepareStatement(sql);
+			
+			smtp.setLong(1, idFuncionario);
+			
+			smtp.execute();
+			smtp.close();
+			conexao.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Deu erro no deletar do dao: " + e.getMessage());
+			System.out.println(e);
+			throw new RuntimeException();
+		}
 	}
 }
