@@ -52,12 +52,12 @@
         
             <div class="nameContainer">
                 <label class="name blackFont"> Nome do livro: </label>
-                <input value="${livro.nome}" name="nome" class="inputs blackFont" type="text">
+                <input maxlength="100" value="${livro.nome}" name="nome" class="inputs blackFont" type="text">
             </div>
         
             <div class="authorContainer">
                 <label class="author blackFont"> Nome do autor: </label>
-                <input value="${livro.autor}" name="autor" class="inputs blackFont" type="text" name="" id="">
+                <input maxlength="100"value="${livro.autor}" name="autor" class="inputs blackFont" type="text" name="" id="">
             </div>
         
             <div class="pagesContainer">

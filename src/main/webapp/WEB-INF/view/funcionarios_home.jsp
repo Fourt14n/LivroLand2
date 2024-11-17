@@ -51,7 +51,7 @@
 
       
       <div class="btnAdd">
-        <a href="./funcionario_form">
+        <a href="./funcionarios_form">
           <button>Adicionar funcionário</button>
         </a>
       </div>
@@ -63,7 +63,7 @@
        -->
        
             <c:forEach items="${funcionarios}" var="funcionario">
-        <a class="card-livro" href="funcioniario?idFuncionario=${funcionario.id}">
+        <a class="card-livro" href="funcionario?idFuncionario=${funcionario.id}">
           <div class="card-content">
             <img class="imgLivro" src="image/conta.png" alt="Livro" />
             <h2 class="headerLivro">${funcionario.nome}</h2> <!--  Livro.getNome() -->

@@ -32,7 +32,7 @@
       </header>
       
       
-      <form method="POST" action="${funcionario.id != null ? 'atualizarFuncionario' : 'adicionarFuncionario' }?idFuncionario=${funcionario.id}">
+      <form method="POST" action="${funcionario.id != null ? 'editarFuncionario' : 'adicionarFuncionario'}?idFuncionario=${funcionario.id}">
         
        <div class="backButtonContainer">
         <a href="./funcionarios_home">
